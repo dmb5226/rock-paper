@@ -6,7 +6,7 @@
     }
 
     function humanPlay(){
-        let move = prompt('Choose your weapon:').toLowercase();
+        let move = prompt('Choose your weapon:').toLowerCase();
         if(move === 'rock' || 'paper' || 'scissors'){
             return move;
         }
@@ -49,7 +49,9 @@
         return [winner , result];
 
     }
-
+const playerSelection = humanplay();
+const computerSelection = computerplay();
+console.log(playRound(playerSelection, computerSelection));
 
 
 
