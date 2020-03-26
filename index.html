@@ -1,0 +1,62 @@
+<script>
+    function computerPlay(){
+        let possibilities = ["rock","paper","scissors"];
+        let choice = possibilities(Math.lower(Math.random)*possibilities.length);
+        return choice;
+    }
+
+    function humanPlay(){
+        let move = prompt('Choose your weapon:').toLowercase();
+        if(move === 'rock' || 'paper' || 'scissors'){
+            return move;
+        }
+        else{
+            console.log('That is not an option');
+        }
+     }
+
+    function playRound(playerSelection, computerSelection) {
+        let result = '';
+        let winner = '';
+        if(playerSelection === 'rock' && computerSelection === 'paper'){
+            winner = 'Computer wins!';
+            result = 'Paper beats rock!';
+        }
+        else if(computerSelection === 'rock' && playerSelection === 'paper'){
+            winner = 'Player Wins!';
+            result = 'Paper beats rock!';
+        }
+        else if(playerSelection === 'paper' && computerSelection === 'scissors'){
+            winner = 'Computer Wins!';
+            result = 'Scissors cut paper!'
+        }
+        else if(computerSelection === 'paper' && playerSelection === 'scissors'){
+            winner = 'Player wins!';
+            result = 'Scissors cut paper!';
+        }
+        else if(playerSelection === 'scissors' && computerSelection === 'rock'){
+            winner = 'Computer wins!';
+            result = 'Rock smashes scissors!'
+        }
+        else if(computerSelection === 'rock' && playerSelection === 'scissors'){
+            winner = "Player Wins!";
+            result = 'Rock smashes scissors!';
+        }
+        else{
+            winner = 'Nobody Wins!';
+            result = 'Its a draw!';
+        }
+        return [winner , result];
+
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
