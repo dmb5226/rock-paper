@@ -57,7 +57,7 @@
     function game(){
         for(roundNumber = 1; roundNumber < 6; roundNumber++){
             playerSelection = window.prompt("Rock, paper, or scissors?");
-            let computerSelection = computerPlay();
+            
             playRound(computerSelection, playerSelection);
         if(roundNumber === 5){
             if(playerScore > computerScore){
@@ -89,6 +89,7 @@
         }
     }
 
+    let computerSelection = computerPlay();
     console.log(playRound(computerSelection, playerSelection));
     console.log(playerScore);
     console.log(computerScore);
