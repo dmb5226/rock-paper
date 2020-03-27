@@ -6,7 +6,7 @@
      computerScore = 0;
      playerScore = 0;
      tieScore = 0;
-     
+     let winner;
      
      
      
@@ -23,7 +23,7 @@
 
     function playRound(playerSelection, computerSelection) {
         
-        let winner = '';
+        
         if(playerSelection === 'rock' && computerSelection === 'paper'){
             winner = 'Computer wins! Paper beats rock!';
           
