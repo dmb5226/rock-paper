@@ -6,7 +6,7 @@
      computerScore = 0;
      playerScore = 0;
      tieScore = 0;
-     let winner='';
+     
      
      
      
@@ -60,22 +60,16 @@
         for(roundNumber = 1; roundNumber < 6; roundNumber++){
             playerSelection = prompt("Rock, paper, or scissors?");
             let computerSelection = computerPlay();
-            console.log(playRound(computerSelection, playerSelection));
+            playRound(computerSelection, playerSelection);
             
            
-        if(winner === 'Player wins!'){
-            playerScore++;
-            
+        if(winner === "Player wins!"){
+            playerScore ++;
         }
-        else if (winner === 'Computer wins!'){
-            computerScore++;
-            
+        else if(winner === "Computer wins!"){
+            computerScore ++;
         }
-        else{
-            tieScore++;
-        }
-        console.log(playerScore);
-        console.log(computerScore);
+        
         
         
         if(roundNumber === 5){
@@ -92,7 +86,10 @@
             }
         }
 
-       
+        console.log(+roundNumber+ ' of 5');
+        console.log(playround(computerSelection, playerSelection));
+        console.log(playerScore);
+        console.log(computerScore);
         }
         
     }
