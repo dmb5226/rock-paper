@@ -58,7 +58,7 @@
         for(roundNumber = 1; roundNumber < 6; roundNumber++){
             playerSelection = prompt("Rock, paper, or scissors?");
             
-            playRound(computerSelection, playerSelection);
+           
         if(roundNumber === 5){
             if(playerScore > computerScore){
                 console.log('Congratulations you won!' +playerScore+ ' to ' +computerScore+'.');
@@ -71,29 +71,19 @@
             else{
                 console.log('Its a draw!' +playerScore+ ' to ' +computerScore+'.')
             }
-        }   
         }
-        return;
-    }
 
-    function whoWins(){
-        if(winner === 'Player wins!'){
-            playerScore++;
-            return playerScore;
-        }
-        else if(winner === 'Computer wins!'){
-            computerScore++;
-            return computerScore;
-        }
-        else{
-            console.log('no one wins')
-        }
-    }
-
-    let computerSelection = computerPlay();
+         let computerSelection = computerPlay();
     console.log(playRound(computerSelection, playerSelection));
     console.log(playerScore);
-    console.log(computerScore);
+    console.log(computerScore);  
+        }
+        
+    }
+
+    
+
+    
 
     game();
 
