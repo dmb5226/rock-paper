@@ -61,11 +61,12 @@
     function game(){
         for(roundNumber = 1; roundNumber < 6; roundNumber++){
             playerSelection = prompt("Rock, paper, or scissors?");
-            let computerSelection = computerPlay();
-            playRound(computerSelection,playerSelection);
+            
 
      
-        
+        }
+        let computerSelection = computerPlay();
+            playRound(computerSelection,playerSelection);
         
         if(roundNumber === 5){
             if(playerScore > computerScore){
@@ -87,7 +88,7 @@
         console.log(computerScore);
         }
         
-    }
+    
 
     
 
