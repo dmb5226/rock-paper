@@ -62,7 +62,7 @@
         for(roundNumber = 1; roundNumber < 6; roundNumber++){
             playerSelection = prompt("Rock, paper, or scissors?");
             let computerSelection = computerPlay();
-            playRound();
+            playRound(computerSelection,playerSelection);
 
         if(winner.search('Player')){
             playerScore++;
