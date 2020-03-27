@@ -67,7 +67,7 @@
             roundNumber++;
             playRound();
             console.log(playRound(playerSelection, computerSelection));
-        if(i===5){
+        if(roundNumber === 5){
             if(playerScore > computerScore){
                 console.log('Congratulations you won!' +playerScore+ ' to ' +computerScore+'.');
                 return;
