@@ -64,9 +64,9 @@
             
 
      
-        }
+        
         let computerSelection = computerPlay();
-            playRound(computerSelection,playerSelection);
+        playRound(computerSelection,playerSelection);
         
         if(roundNumber === 5){
             if(playerScore > computerScore){
@@ -83,10 +83,11 @@
         }
 
         console.log(+roundNumber+ ' of 5');
-        console.log(playround(computerSelection, playerSelection));
+        console.log(playRound(computerSelection, playerSelection));
         console.log(playerScore);
         console.log(computerScore);
         }
+    }
         
     
 
