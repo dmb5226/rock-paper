@@ -5,7 +5,7 @@
 <script>
      function computerPlay(){
         let possibilities = ['rock','paper','scissors'];
-        let choice = possibilities[Math.floor(Math.random*possibilities.length)];
+        let choice = possibilities[Math.floor(Math.random() * possibilities.length)];
         return choice;
     }
 
@@ -50,12 +50,12 @@
             winner = 'Nobody Wins!';
             result = 'Its a draw!';
         }
+        
+        const playerSelection = humanPlay();
+        const computerSelection = computerPlay();
         return [winner , result];
-
     }
-const playerSelection = humanPlay();
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+
 
 
 
