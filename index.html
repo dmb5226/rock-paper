@@ -5,6 +5,7 @@
 <script>
      computerScore = 0;
      playerScore = 0;
+     tieScore = 0;
      
      
      
@@ -59,6 +60,19 @@
             playerSelection = prompt("Rock, paper, or scissors?");
             
            
+        if(winner === 'Player wins!'){
+            playerScore++;
+            
+        }
+        else if (winner === 'Computer wins!'){
+            computerScore++;
+            
+        }
+        else{
+            tieScore++;
+        }
+        
+        
         if(roundNumber === 5){
             if(playerScore > computerScore){
                 console.log('Congratulations you won!' +playerScore+ ' to ' +computerScore+'.');
