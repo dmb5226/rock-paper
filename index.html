@@ -3,6 +3,12 @@
 <header></header>
 <body></body>
 <script>
+     computerScore = 0;
+     playerScore = 0;
+     roundNumber = 0;
+     
+     
+     
      function computerPlay(){
         let possibilities = ['rock','paper','scissors'];
         let choice = possibilities[Math.floor(Math.random() * possibilities.length)];
@@ -27,11 +33,11 @@
             result = 'Paper beats rock!';
         }
         else if(computerSelection === 'rock' && playerSelection === 'paper'){
-            winner = 'Player Wins!';
+            winner = 'Player wins!';
             result = 'Paper beats rock!';
         }
         else if(playerSelection === 'paper' && computerSelection === 'scissors'){
-            winner = 'Computer Wins!';
+            winner = 'Computer wins!';
             result = 'Scissors cut paper!'
         }
         else if(computerSelection === 'paper' && playerSelection === 'scissors'){
@@ -43,11 +49,11 @@
             result = 'Rock smashes scissors!'
         }
         else if(computerSelection === 'rock' && playerSelection === 'scissors'){
-            winner = "Player Wins!";
+            winner = "Player wins!";
             result = 'Rock smashes scissors!';
         }
         else{
-            winner = 'Nobody Wins!';
+            winner = 'Nobody wins!';
             result = 'Its a draw!';
         }
         return [winner , result];
@@ -57,11 +63,31 @@
     console.log(playRound(playerSelection , computerSelection));
 
     function game(){
-        for (i = 1;  i < 6; i++){
-            roundNumber++;
+        if(roundNumber <= 5){
             playRound();
+            roundNumber++;
+            return roundNumber;
+        }
+        else{
+            console.log('game over');
         }
     }
+
+    function whoWins(winner){
+        if(winner === 'Player wins!'){
+            playerScore++;
+            return playerScore;
+        }
+        else if(winner === 'Computer wins!'){
+            computerScore++;
+            return computerScore;
+        }
+        else{
+            console.log('no one wins')
+        }
+    }
+
+    
 
 
 
