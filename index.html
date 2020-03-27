@@ -63,10 +63,10 @@
             playRound(computerSelection, playerSelection);
             
            
-        if(winner === "Player wins!"){
+        if(winner.search('Player')){
             playerScore ++;
         }
-        else if(winner === "Computer wins!"){
+        else if(winner.search('Computer')){
             computerScore ++;
         }
         
