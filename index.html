@@ -15,15 +15,7 @@
         return choice;
     }
 
-    function humanPlay(){
-        let move = prompt('Choose your weapon:').toLowerCase();
-        if(move === 'rock' || move === 'paper' || move === 'scissors'){
-            return move;
-        }
-        else{
-            console.log('That is not an option');
-        }
-     }
+
 
     function playRound(playerSelection, computerSelection) {
         let result = '';
@@ -58,14 +50,13 @@
         }
         return [winner , result];
     }
-    playerSelection = humanPlay();
+   
     computerSelection = computerPlay();
     
 
     function game(){
         for(roundNumber = 1; roundNumber < 6; roundNumber++){
-            roundNumber++;
-            playRound();
+            playerSelection = window.prompt("Rock, paper, or scissors?");
         if(roundNumber === 5){
             if(playerScore > computerScore){
                 console.log('Congratulations you won!' +playerScore+ ' to ' +computerScore+'.');
