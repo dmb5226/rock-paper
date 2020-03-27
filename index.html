@@ -26,32 +26,39 @@
         if(playerSelection === 'rock' && computerSelection === 'paper'){
             winner = 'Computer wins!';
             result = 'Paper beats rock!';
+            computerScore++;
         }
         else if(computerSelection === 'rock' && playerSelection === 'paper'){
             winner = 'Player wins!';
             result = 'Paper beats rock!';
+            playerScore++;
         }
         else if(playerSelection === 'paper' && computerSelection === 'scissors'){
             winner = 'Computer wins!';
             result = 'Scissors cut paper!'
+            computerScore++;
         }
         else if(computerSelection === 'paper' && playerSelection === 'scissors'){
             winner = 'Player wins!';
             result = 'Scissors cut paper!';
+            playerScore++;
         }
         else if(playerSelection === 'scissors' && computerSelection === 'rock'){
             winner = 'Computer wins!';
             result = 'Rock smashes scissors!'
+            computerScore++;
         }
         else if(computerSelection === 'rock' && playerSelection === 'scissors'){
             winner = "Player wins!";
             result = 'Rock smashes scissors!';
+            playerScore++;
         }
         else{
             winner = 'Nobody wins!';
             result = 'Its a draw!';
+            tieScore++;
         }
-        return winner, result;
+        return;
     }
    
    
@@ -62,14 +69,7 @@
             playerSelection = prompt("Rock, paper, or scissors?");
             let computerSelection = computerPlay();
             playRound();
-            
-           
-        if(winner.search('Player')){
-            playerScore ++;
-        }
-        else if(winner.search('Computer')){
-            computerScore ++;
-        }
+
         
         
         
