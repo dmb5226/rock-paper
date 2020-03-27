@@ -26,17 +26,17 @@
         if(playerSelection === 'rock' && computerSelection === 'paper'){
             winner = 'Computer wins!';
             result = 'Paper beats rock!';
-            computerScore++;
+          
         }
         else if(computerSelection === 'rock' && playerSelection === 'paper'){
             winner = 'Player wins!';
             result = 'Paper beats rock!';
-            playerScore++;
+            
         }
         else if(playerSelection === 'paper' && computerSelection === 'scissors'){
             winner = 'Computer wins!';
             result = 'Scissors cut paper!'
-            computerScore++;
+            
         }
         else if(computerSelection === 'paper' && playerSelection === 'scissors'){
             winner = 'Player wins!';
@@ -56,9 +56,9 @@
         else{
             winner = 'Nobody wins!';
             result = 'Its a draw!';
-            tieScore++;
+            
         }
-        return;
+        return winner, result, playerScore, computerScore;
     }
    
    
