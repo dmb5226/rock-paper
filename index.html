@@ -51,12 +51,14 @@
         return [winner , result];
     }
    
-    computerSelection = computerPlay();
+   
     
 
     function game(){
         for(roundNumber = 1; roundNumber < 6; roundNumber++){
             playerSelection = window.prompt("Rock, paper, or scissors?");
+            computerSelection = computerPlay();
+            playRound(computerSelection, playerSelection);
         if(roundNumber === 5){
             if(playerScore > computerScore){
                 console.log('Congratulations you won!' +playerScore+ ' to ' +computerScore+'.');
